@@ -13,7 +13,8 @@
 
         <script>
             var self = this;
-            fetch( 'http://160.237.176.108/weather' )
+            var query =  riot.route.query();
+            fetch( 'http://localhost/weather' + '?' + query.token )
                     .then( function ( data ) {
                         return data.json();
                     } )
