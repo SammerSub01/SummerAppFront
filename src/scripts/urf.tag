@@ -53,7 +53,7 @@
             console.log(username);
             console.log(password);
             console.log(prefectures);
-            fetch('http://160.237.122.17:8080/register', {
+            fetch('http://localhost/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -14,7 +14,7 @@ require('./logname.tag');
                 </div>
             </div>
             <div class="row" >
-                <button class="waves-effect waves-light btn col s12"  disabled={ !text }>button</button>
+                <button class="waves-effect waves-light btn col s12"  >button</button>
             </div>
 
         </form>
@@ -28,7 +28,7 @@ require('./logname.tag');
             console.log(username);
             console.log(password);
 
-            fetch('http://160.237.122.17:8080/login', {
+            fetch('http://localhost/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -37,11 +37,11 @@ require('./logname.tag');
                     user_name: username,
                     password: password,
                 })
-            }).then(function(respo) {
-                return response.text();
+            }).then(function(response) {
+                return response.json();
             }).then(function(json) {
                 console.log(json);
-                riot.route('weather')
+                riot.route('weather' + '?token=' + json.token)
             });
         };
     </script>
