@@ -9,6 +9,8 @@ require('./urf.tag');
 require('./notfound.tag');
 require('./login.tag');
 require('./logname.tag');
+require('./sresult.tag');
+require('./gresult.tag');
 
 riot.mount('*');
 
