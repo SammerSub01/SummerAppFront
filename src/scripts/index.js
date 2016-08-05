@@ -24,6 +24,7 @@ riot.router.routes([
     //new Route({path: 'users',tag: 'users'}),
     new Route({path: 'add',tag: 'urf'}),
     new Route({path: 'login',tag: 'login'}),
+    new Route({path: 'weather',tag: 'sresult'}),
     //new DefaultRoute({tag: 'urf'}),
     new RedirectRoute({from: 'h', to: 'urf'}),
     //new NotFoundRoute({tag: 'notfound'})
